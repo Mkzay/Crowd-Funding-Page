@@ -16,6 +16,9 @@ module.exports = {
           Darkgray: 'hsl(0, 0%, 48%)'
         },
       },
+      spacing: {
+        '10/13': '89%'
+      },
     },
   },
   plugins: [],
