@@ -1,6 +1,6 @@
 const navToggle = document.getElementById('nav-toggle');
 const navbarLinks = document.getElementById('navbar-links');
-const toggleIcon = document.getElementById('toggle-icon'); // Define toggleIcon
+const toggleIcon = document.getElementById('toggle-icon');
 
 navToggle.addEventListener('click', function() {
   navbarLinks.classList.toggle('hidden');
