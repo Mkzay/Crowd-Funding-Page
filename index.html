@@ -129,7 +129,7 @@
     </main>
 
 
-    <aside id="project-card" class="hidden flex items-center justify-center flex-col pt-10 pb-7 w-11/12 bg-white border border-Neutral-Darkgray rounded-lg absolute top-28">
+    <aside id="project-card" class="hidden flex items-center justify-center flex-col pt-10 pb-7 w-11/12 bg-white border border-Neutral-Darkgray rounded-lg absolute top-28 shadow-2xl">
         <section class="px-5 pb-5">
             <div class="flex flex-row items-center justify-between gap-3 pb-4">
                 <h1 class="text-Neutral-Black text-2xl font-bold pb-4">Back this project</h1>
@@ -143,9 +143,9 @@
         </section>
         
         <section class="flex items-center justify-center flex-col gap-8">
-            <div id="selected-bg" class="flex flex-col w-10/13 border border-Neutral-Darkgray rounded-lg p-5">
+            <div id="selected-bg1" class="flex flex-col w-10/13 border border-Neutral-Darkgray rounded-lg p-5">
                 <div class="flex flex-row items-center gap-3 pb-4">
-                    <button id="bg-button" class="h-6 w-6 rounded-full border border-Neutral-Darkgray bg-white"></button>
+                    <button id="bg-button1" class="h-6 w-6 rounded-full border border-Neutral-Darkgray bg-white"></button>
                     <div>
                         <h1 class="text-Neutral-Black text-xl font-bold">Pledge with no reward</h1>
                     </div>
@@ -154,19 +154,19 @@
                     <p class="text-Neutral-Darkgray text-base text-left font-normal">  Choose to support us without a reward if you simply believe in our project. As a backer, 
                         you will be signed up to receive product updates via email.
                     </p>
-                    <div id="modal-container" class="hidden flex flex-col items-center w-full justify-center gap-3 border-t border-Neutral-Darkgray mt-5 pt-7 pt-5 pb-3">
+                    <div id="modal-container1" class="hidden flex flex-col items-center w-full justify-center gap-3 border-t border-Neutral-Darkgray mt-5 pt-7 pt-5 pb-3">
                         <div>
                             <p class="text-base text-Neutral-Darkgray font-medium">Enter your pledge</p>
                         </div>
                         <div>
-                            <button class="text-lg text-white font-normal bg-Primary-Moderatecyan rounded-full w-full py-3 px-9">Continue</button>
+                            <button id="complete-button1" class="text-lg text-white font-normal bg-Primary-Moderatecyan rounded-full w-full py-3 px-9">Continue</button>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="flex flex-col w-10/13 border border-Neutral-Darkgray rounded-lg p-5">
+            <div id="selected-bg2" class="flex flex-col w-10/13 border border-Neutral-Darkgray rounded-lg p-5">
                 <div class="flex flex-row items-center gap-3">
-                    <button class="h-6 w-6 rounded-full border border-Neutral-Darkgray bg-white -mt-3"></button>
+                    <button id="bg-button2" class="h-6 w-6 rounded-full border border-Neutral-Darkgray bg-white -mt-3"></button>
                     <div class="flex flex-col pb-5">
                         <h1 class="text-Neutral-Black text-xl font-bold">Bamboo Stand</h1>
                         <h2 class="text-Primary-Moderatecyan text-lg font-medium">Pledge $25 or more</h2>
@@ -180,7 +180,7 @@
                 <div class="pb-2">
                     <p class="text-Neutral-Black text-2xl font-bold">101 <span class="text-Neutral-Darkgray text-base text-left font-normal">Left</span></p>
                 </div>
-                <div class="hidden flex flex-col items-center w-full justify-center gap-3 border-t border-Neutral-Darkgray mt-5 pt-7 pt-5 pb-3">
+                <div id="modal-container2" class="hidden flex flex-col items-center w-full justify-center gap-3 border-t border-Neutral-Darkgray mt-5 pt-7 pt-5 pb-3">
                     <div>
                         <p class="text-base text-Neutral-Darkgray font-medium">Enter your pledge</p>
                     </div>
@@ -190,9 +190,9 @@
                     </div>
                 </div>
             </div>
-            <div class="flex flex-col w-10/13 border border-Neutral-Darkgray rounded-lg p-5">
+            <div id="selected-bg3" class="flex flex-col w-10/13 border border-Neutral-Darkgray rounded-lg p-5">
                 <div class="flex flex-row items-center gap-3">
-                    <button class="h-6 w-6 rounded-full border border-Neutral-Darkgray bg-white -mt-3"></button>
+                    <button id="bg-button3" class="h-6 w-6 rounded-full border border-Neutral-Darkgray bg-white -mt-3"></button>
                     <div class="flex flex-col pb-5">
                         <h1 class="text-Neutral-Black text-xl font-bold">Black Edition Stand</h1>
                         <h2 class="text-Primary-Moderatecyan text-lg font-medium">Pledge $75 or more</h2>
@@ -206,7 +206,7 @@
                 <div class="pb-2">
                     <p class="text-Neutral-Black text-2xl font-bold">64 <span class="text-Neutral-Darkgray text-base text-left font-normal">left</span></p>
                 </div>
-                <div class="hidden flex flex-col items-center w-full justify-center gap-3 border-t border-Neutral-Darkgray mt-5 pt-7 pt-5 pb-3">
+                <div id="modal-container3" class="hidden flex flex-col items-center w-full justify-center gap-3 border-t border-Neutral-Darkgray mt-5 pt-7 pt-5 pb-3">
                     <div>
                         <p class="text-base text-Neutral-Darkgray font-medium">Enter your pledge</p>
                     </div>
@@ -235,7 +235,15 @@
             </div>
         </section>
     </aside>
+
+    <aside id="thank-you-modal" class="hidden flex items-center justify-center flex-col w-11/12 p-7 bg-white border border-Neutral-Darkgray rounded-lg absolute top-36 shadow-2xl">
+        <img class="pb-4" src="images/icon-check.svg" alt="icon-check">
+        <h1 class="text-Neutral-Black text-2xl font-bold pb-4">Thanks for your support!</h1>
+        <p class="text-Neutral-Darkgray text-base text-center font-normal pb-5">Your pledge brings us one step closer to sharing Mastercraft Bamboo Monitor Riser worldwide. You will get
+            an email once our campaign is completed.
+        </p>
+        <button id="clear-button" class="text-lg text-white font-normal bg-Primary-Moderatecyan rounded-full py-3 px-9">Got it!</button>
+    </aside>
       <script src="app.js"></script>
-      <script src="src/app1.js"></script>
 </body>
 </html>
