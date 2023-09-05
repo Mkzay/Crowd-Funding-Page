@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
   });
   
   
-  // Script for Main Modal
+  // Script for Tiny Modals
   let selected1 = document.querySelector('#bg-button1');
   let borderChange1 = document.querySelector('#selected-bg1');
   let modalContainer1 = document.getElementById('modal-container1');
@@ -48,13 +48,13 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
 
-  //Script for Tiny modal
+  //Script for Main modal
   let projectButton = document.querySelector('#project');
   let closeBtn = document.querySelector('#close-btn');
   let projectCard = document.querySelector('#project-card');
   
   projectButton.addEventListener('click', function(){
-      projectCard.style.display = 'block';
+      projectCard.style.display = 'flex';
   });
   
   closeBtn.addEventListener('click', function(){
@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', function() {
   let clearButton = document.querySelector('#clear-button');
 
   completeButton.addEventListener('click', function(){
-  thankYouModal.style.display = 'block';
+  thankYouModal.style.display = 'flex';
   projectCard.style.display = 'none';
 
   });
@@ -75,5 +75,14 @@ document.addEventListener('DOMContentLoaded', function() {
   clearButton.addEventListener('click', function(){
     thankYouModal.style.display = 'none';
   });
+
+  //Script for bookmark
+  let bookmark = document.querySelector('#bookmark');
+  let bookmarkText = document.querySelector('#bookmark-text');
+
+  bookmark.addEventListener('click', function(){
+    bookmarkText.style.color = 'hsl(176, 72%, 28%)'
+    bookmarkText.innerHTML = 'Bookmarked'
+  })
 
 });

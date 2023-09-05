@@ -9,24 +9,24 @@
 </head>
 <body class=" flex items-center justify-center flex-col text-base font-Commissioner mb-10 gap-10">
 
-    <nav class="w-full h-72 bg-[url('/images/image-hero-mobile.jpg')] bg-no-repeat bg-[length:30rem_20rem]">
-        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+    <nav class="w-full h-72 bg-[url('/images/image-hero-mobile.jpg')] bg-no-repeat bg-[length:30rem_20rem] md:bg-[url('/images/image-hero-desktop.jpg')] md:bg-cover">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 md:px-20">
             <a>
                 <img src="images/logo.svg" alt="logo">
             </a>
             <button id="nav-toggle">
-                <img id="toggle-icon" src="images/icon-hamburger.svg" alt="icon-hamburger">
+                <img id="toggle-icon" class="md:hidden" src="images/icon-hamburger.svg" alt="icon-hamburger">
             </button>
             <div id="navbar-links" class=" hidden w-full py-8 md:block md:w-auto z-10">
-                <ul class="flex flex-col font-medium mt-4 rounded-lg bg-white shadow-xl md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-transparent">
+                <ul class="flex flex-col font-medium mt-4 rounded-lg bg-white md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-transparent">
                     <li>
-                        <a href="#" class="block py-5 pl-7 pr-4 text-Neutral-Black text-xl font-medium border-b border-Neutral-Darkgray rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0">About</a>
+                        <a href="#" class="block py-5 pl-7 pr-4 text-Neutral-Black text-xl font-medium border-b border-Neutral-Darkgray rounded md:border-0 md:p-0 md:text-white">About</a>
                     </li>
                     <li>
-                        <a href="#" class="block py-5 pl-7 pr-4 text-Neutral-Black text-xl font-medium border-b border-Neutral-Darkgray rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0">Discover</a>
+                        <a href="#" class="block py-5 pl-7 pr-4 text-Neutral-Black text-xl font-medium border-b border-Neutral-Darkgray rounded md:border-0 md:p-0 md:text-white md:bg-transparent">Discover</a>
                     </li>
                     <li>
-                        <a href="#" class="block py-5 pl-7 pr-4 text-Neutral-Black text-xl font-medium rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0">Get Started</a>
+                        <a href="#" class="block py-5 pl-7 pr-4 text-Neutral-Black text-xl font-medium rounded md:border-0 md:p-0 md:text-white">Get Started</a>
                     </li>
                 </ul>
             </div>
@@ -38,28 +38,29 @@
             <img class="relative bottom-7 p-0" src="images/logo-mastercraft.svg" alt="logo-mastercraft">
             <h1 class="text-Neutral-Black text-2xl text-center font-bold pb-4">Mastercraft Bamboo Monitor Riser</h1>
             <p class="text-Neutral-Darkgray text-lg text-center font-medium pb-4">A beautiful & handcrafted monitor stand to reduce neck and eye strain.</p>
-            <div class="flex items-center justify-between flex-row gap-3 pb-4">
-                <button id="project" class="bg-Primary-Moderatecyan text-white text-lg rounded-full w-full p-3 font-bold">Back this project</button>
-                <button>
-                    <img class="w-20" src="images/icon-bookmark.svg" alt="icon-bookmark">
-                </button>
+            <div class="flex items-center justify-center flex-row w-full gap-3 pb-4 md:justify-between">
+                <button id="project" class="bg-Primary-Moderatecyan hover:bg-Primary-Darkcyan text-white text-lg md:w-5/12 rounded-full p-3 font-bold">Back this project</button>
+                <div id="bookmark" class="flex items-center justify-center gap-2 md:bg-gray-50 md:rounded-full md:pr-5 cursor-pointer">
+                        <img src="images/icon-bookmark.svg" alt="icon-bookmark">
+                    <p id="bookmark-text" class="hidden text-Neutral-Darkgray text-base font-bold md:block">Bookmark</p>
+                </div>
             </div>
         </div>
 
-        <div class="flex items-center justify-center flex-col w-11/12 pt-4 px-5 pb-10 bg-white border border-Neutral-Darkgray rounded-lg">
-            <div class="flex items-center justify-center flex-col">
-                <h1 class="text-Neutral-Black text-3xl font-bold pt-5 pb-2">$89,914</h1>
-                <p class="text-Neutral-Darkgray text-base font-medium">of $100,000 backed</p>
-                <div class="bg-Neutral-Darkgray w-24 h-px rounded-full mt-5"></div>
+        <div class="flex items-center justify-center flex-col w-11/12 pt-4 px-5 pb-10 bg-white border border-Neutral-Darkgray rounded-lg md:pb-5">
+            <div class="flex items-center justify-center flex-col w-full md:justify-between md:flex-row md:pr-16">
+                <div class="flex items-center justify-center flex-col border-b pb-5 border-Neutral-Darkgray md:border-r md:border-b-0 md:pr-5 md:pb-0">
+                    <h1 class="text-Neutral-Black text-3xl font-bold pt-5 pb-2">$89,914</h1>
+                    <p class="text-Neutral-Darkgray text-base font-medium md:pl-6">of $100,000 backed</p>
+                </div>
+                <div class="flex items-center justify-center flex-col border-b pb-5 border-Neutral-Darkgray md:border-r md:border-b-0 md:pr-5 md:pb-0">
+                   <h1 class="text-Neutral-Black text-3xl font-bold pt-5 pb-2">5,007</h1>
+                   <p class="text-Neutral-Darkgray text-base font-medium md:pl-4">total backers</p>
+               </div>
+               <div class="flex items-center justify-center flex-col">
+                   <h1 class="text-Neutral-Black text-3xl font-bold pt-5 pb-2">56</h1>
+                   <p class="text-Neutral-Darkgray text-base font-medium md:pl-6">days left</p>
             </div>
-            <div class="flex items-center justify-center flex-col">
-                <h1 class="text-Neutral-Black text-3xl font-bold pt-5 pb-2">5,007</h1>
-                <p class="text-Neutral-Darkgray text-base font-medium">total backers</p>
-                <div class="bg-Neutral-Darkgray w-24 h-px rounded-full mt-5"></div>
-            </div>
-            <div class="flex items-center justify-center flex-col">
-                <h1 class="text-Neutral-Black text-3xl font-bold pt-5 pb-2">56</h1>
-                <p class="text-Neutral-Darkgray text-base font-medium">days left</p>
             </div>
             <div class="w-full bg-gray-200 rounded-full h-2.5 mb-4 dark:bg-gray-700 mt-4">
                 <div class="bg-Primary-Moderatecyan h-2.5 rounded-full" style="width: 80%"></div>
@@ -67,7 +68,7 @@
         </div>
     </section>
 
-    <main class="flex items-center justify-center flex-col pt-10 pb-7 w-11/12 bg-white border border-Neutral-Darkgray rounded-lg">
+    <main class="flex items-center justify-center flex-col pt-10 pb-7 w-11/12 bg-white border border-Neutral-Darkgray rounded-lg md:w-[35rem]">
         <section class="px-5 pb-5">
             <h1 class="text-Neutral-Black text-2xl font-bold pb-4">About this project</h1>
             <p class="text-Neutral-Darkgray text-base font-normal pb-4">The Mastercraft Bamboo Monitor Riser is a sturdy and stylish platform that elevates your screen 
@@ -81,7 +82,7 @@
         
         <section class="flex items-center justify-center flex-col gap-8">
             <div class="flex flex-col w-10/13 border border-Neutral-Darkgray rounded-lg p-5">
-                <div class="flex flex-col pb-5">
+                <div class="flex flex-col pb-5 md:flex-row md:justify-between">
                     <h1 class="text-Neutral-Black text-xl font-bold">Bamboo Stand</h1>
                     <h2 class="text-Primary-Moderatecyan text-lg font-medium">Pledge $25 or more</h2>
                 </div>
@@ -90,13 +91,13 @@
                         you'll be added to a special Backer member list.
                     </p>
                 </div>
-                <div class="flex flex-col gap-4 pb-2">
+                <div class="flex flex-col gap-4 pb-2 md:flex-row md:justify-between">
                     <p class="text-Neutral-Black text-3xl font-bold">101<span class="text-Neutral-Darkgray text-base text-left font-normal">Left</span></p>
-                    <button class="bg-Primary-Moderatecyan text-white text-lg rounded-full w-8/12 p-3 font-bold">Select Reward</button>
+                    <button class="bg-Primary-Moderatecyan hover:bg-Primary-Darkcyan text-white text-lg rounded-full w-8/12 p-3 font-bold md:w-5/12">Select Reward</button>
                 </div>
             </div>
             <div class="flex flex-col w-10/13 border border-Neutral-Darkgray rounded-lg p-5">
-                <div class="flex flex-col pb-5">
+                <div class="flex flex-col pb-5 md:flex-row md:justify-between">
                     <h1 class="text-Neutral-Black text-xl font-bold">Black Edition Stand</h1>
                     <h2 class="text-Primary-Moderatecyan text-lg font-medium">Pledge $75 or more</h2>
                 </div>
@@ -105,13 +106,13 @@
                         member list. Shipping is included.
                     </p>
                 </div>
-                <div class="flex flex-col gap-4 pb-2">
+                <div class="flex flex-col gap-4 pb-2 md:flex-row md:justify-between">
                     <p class="text-Neutral-Black text-3xl font-bold">64<span class="text-Neutral-Darkgray text-base text-left font-normal">left</span></p>
-                    <button class="bg-Primary-Moderatecyan text-white text-lg rounded-full w-8/12 p-3 font-bold">Select Reward</button>
+                    <button class="bg-Primary-Moderatecyan hover:bg-Primary-Darkcyan text-white text-lg rounded-full w-8/12 p-3 font-bold md:w-5/12">Select Reward</button>
                 </div>
             </div>
             <div class="flex flex-col w-10/13 border border-Neutral-Darkgray rounded-lg p-5 opacity-60">
-                <div class="flex flex-col pb-5">
+                <div class="flex flex-col pb-5 md:flex-row md:justify-between">
                     <h1 class="text-Neutral-Black text-xl font-bold">Mahogany Special Edition</h1>
                     <h2 class="text-Primary-Moderatecyan text-lg font-medium">Pledge $200 or more</h2>
                 </div>
@@ -120,16 +121,16 @@
                         to our Backer member list. Shipping is included.
                     </p>
                 </div>
-                <div class="flex flex-col gap-4 pb-2">
+                <div class="flex flex-col gap-4 pb-2 md:flex-row md:justify-between">
                     <p class="text-Neutral-Black text-3xl font-bold">0<span class="text-Neutral-Darkgray text-base text-left font-normal">left</span></p>
-                    <button class="bg-Neutral-Darkgray text-white text-lg rounded-full w-8/12 p-3 font-bold">Out of Stock</button>
+                    <button class="bg-Neutral-Darkgray text-white text-lg rounded-full w-8/12 p-3 font-bold md:w-5/12">Out of Stock</button>
                 </div>
             </div>
         </section>
     </main>
 
 
-    <aside id="project-card" class="hidden flex items-center justify-center flex-col pt-10 pb-7 w-11/12 bg-white border border-Neutral-Darkgray rounded-lg absolute top-28 shadow-2xl">
+    <aside id="project-card" class="hidden flex items-center justify-center flex-col pt-10 pb-7 w-11/12 bg-white border border-Neutral-Darkgray rounded-lg absolute top-28 shadow-2xl md:w-[37rem]">
         <section class="px-5 pb-5">
             <div class="flex flex-row items-center justify-between gap-3 pb-4">
                 <h1 class="text-Neutral-Black text-2xl font-bold pb-4">Back this project</h1>
@@ -147,19 +148,19 @@
                 <div class="flex flex-row items-center gap-3 pb-4">
                     <button id="bg-button1" class="h-6 w-6 rounded-full border border-Neutral-Darkgray bg-white"></button>
                     <div>
-                        <h1 class="text-Neutral-Black text-xl font-bold">Pledge with no reward</h1>
+                        <h1 class="text-Neutral-Black text-xl font-bold hover:text-Primary-Moderatecyan cursor-pointer">Pledge with no reward</h1>
                     </div>
                 </div>
                 <div class="pb-4">
-                    <p class="text-Neutral-Darkgray text-base text-left font-normal">  Choose to support us without a reward if you simply believe in our project. As a backer, 
+                    <p class="text-Neutral-Darkgray text-base text-left font-normal">Choose to support us without a reward if you simply believe in our project. As a backer, 
                         you will be signed up to receive product updates via email.
                     </p>
-                    <div id="modal-container1" class="hidden flex flex-col items-center w-full justify-center gap-3 border-t border-Neutral-Darkgray mt-5 pt-7 pt-5 pb-3">
+                    <div id="modal-container1" class="hidden flex flex-col items-center w-full justify-center gap-3 border-t border-Neutral-Darkgray mt-5 pt-5 pb-3 md:flex-row">
                         <div>
                             <p class="text-base text-Neutral-Darkgray font-medium">Enter your pledge</p>
                         </div>
                         <div>
-                            <button id="complete-button1" class="text-lg text-white font-normal bg-Primary-Moderatecyan rounded-full w-full py-3 px-9">Continue</button>
+                            <button id="complete-button1" class="text-lg text-white font-normal bg-Primary-Moderatecyan rounded-full w-full py-3 px-9 hover:bg-Primary-Darkcyan">Continue</button>
                         </div>
                     </div>
                 </div>
@@ -167,9 +168,9 @@
             <div id="selected-bg2" class="flex flex-col w-10/13 border border-Neutral-Darkgray rounded-lg p-5">
                 <div class="flex flex-row items-center gap-3">
                     <button id="bg-button2" class="h-6 w-6 rounded-full border border-Neutral-Darkgray bg-white -mt-3"></button>
-                    <div class="flex flex-col pb-5">
-                        <h1 class="text-Neutral-Black text-xl font-bold">Bamboo Stand</h1>
-                        <h2 class="text-Primary-Moderatecyan text-lg font-medium">Pledge $25 or more</h2>
+                    <div class="flex flex-col pb-5 md:flex-row md:gap-4">
+                        <h1 class="text-Neutral-Black text-xl font-bold hover:text-Primary-Moderatecyan cursor-pointer">Bamboo Stand</h1>
+                        <h2 class="text-Primary-Moderatecyan text-lg font-medium hover:text-Primary-Moderatecyan">Pledge $25 or more</h2>
                     </div>
                 </div>
                 <div class="pb-4">
@@ -180,22 +181,22 @@
                 <div class="pb-2">
                     <p class="text-Neutral-Black text-2xl font-bold">101 <span class="text-Neutral-Darkgray text-base text-left font-normal">Left</span></p>
                 </div>
-                <div id="modal-container2" class="hidden flex flex-col items-center w-full justify-center gap-3 border-t border-Neutral-Darkgray mt-5 pt-7 pt-5 pb-3">
+                <div id="modal-container2" class="hidden flex flex-col items-center w-full justify-center gap-3 border-t border-Neutral-Darkgray mt-5 pt-5 pb-3 md:gap-96">
                     <div>
                         <p class="text-base text-Neutral-Darkgray font-medium">Enter your pledge</p>
                     </div>
                     <div class="flex items-center flex-row gap-3">
                         <input type="text" placeholder="$" class="text-lg text-black font-bold border border-Neutral-Darkgray rounded-full w-full py-3 px-7"></input>
-                        <button class="text-lg text-white font-normal bg-Primary-Moderatecyan rounded-full w-full py-3 px-9">Continue</button>
+                        <button class="text-lg text-white font-normal bg-Primary-Moderatecyan rounded-full w-full py-3 px-9 hover:bg-Primary-Darkcyan">Continue</button>
                     </div>
                 </div>
             </div>
             <div id="selected-bg3" class="flex flex-col w-10/13 border border-Neutral-Darkgray rounded-lg p-5">
                 <div class="flex flex-row items-center gap-3">
                     <button id="bg-button3" class="h-6 w-6 rounded-full border border-Neutral-Darkgray bg-white -mt-3"></button>
-                    <div class="flex flex-col pb-5">
-                        <h1 class="text-Neutral-Black text-xl font-bold">Black Edition Stand</h1>
-                        <h2 class="text-Primary-Moderatecyan text-lg font-medium">Pledge $75 or more</h2>
+                    <div class="flex flex-col pb-5 md:flex-row md:gap-4">
+                        <h1 class="text-Neutral-Black text-xl font-bold hover:text-Primary-Moderatecyan cursor-pointer">Black Edition Stand</h1>
+                        <h2 class="text-Primary-Moderatecyan text-lg font-medium hover:text-Primary-Moderatecyan cursor-pointer">Pledge $75 or more</h2>
                     </div>
                 </div>
                 <div class="pb-4">
@@ -206,20 +207,20 @@
                 <div class="pb-2">
                     <p class="text-Neutral-Black text-2xl font-bold">64 <span class="text-Neutral-Darkgray text-base text-left font-normal">left</span></p>
                 </div>
-                <div id="modal-container3" class="hidden flex flex-col items-center w-full justify-center gap-3 border-t border-Neutral-Darkgray mt-5 pt-7 pt-5 pb-3">
+                <div id="modal-container3" class="hidden flex flex-col items-center w-full justify-center gap-3 border-t border-Neutral-Darkgray mt-5 pt-5 pb-3">
                     <div>
                         <p class="text-base text-Neutral-Darkgray font-medium">Enter your pledge</p>
                     </div>
                     <div class="flex items-center flex-row gap-3">
                         <input type="text" placeholder="$" class="text-lg text-black font-bold border border-Neutral-Darkgray rounded-full w-full py-3 px-7"></input>
-                        <button class="text-lg text-white font-normal bg-Primary-Moderatecyan rounded-full w-full py-3 px-9">Continue</button>
+                        <button class="text-lg text-white font-normal bg-Primary-Moderatecyan rounded-full w-full py-3 px-9 hover:bg-Primary-Darkcyan">Continue</button>
                     </div>
                 </div>
             </div>
             <div class="flex flex-col w-10/13 border border-Neutral-Darkgray rounded-lg p-5 opacity-60">
                 <div class="flex flex-row items-center gap-3">
                     <div class="h-6 w-6 rounded-full border border-Neutral-Darkgray bg-white -mt-3"></div>
-                    <div class="flex flex-col pb-5">
+                    <div class="flex flex-col pb-5 md:flex-row md:gap-4">
                         <h1 class="text-Neutral-Black text-xl font-bold">Mahogany Special Edition</h1>
                         <h2 class="text-Primary-Moderatecyan text-lg font-medium">Pledge $200 or more</h2>
                     </div>
@@ -236,14 +237,20 @@
         </section>
     </aside>
 
-    <aside id="thank-you-modal" class="hidden flex items-center justify-center flex-col w-11/12 p-7 bg-white border border-Neutral-Darkgray rounded-lg absolute top-36 shadow-2xl">
-        <img class="pb-4" src="images/icon-check.svg" alt="icon-check">
-        <h1 class="text-Neutral-Black text-2xl font-bold pb-4">Thanks for your support!</h1>
-        <p class="text-Neutral-Darkgray text-base text-center font-normal pb-5">Your pledge brings us one step closer to sharing Mastercraft Bamboo Monitor Riser worldwide. You will get
-            an email once our campaign is completed.
-        </p>
-        <button id="clear-button" class="text-lg text-white font-normal bg-Primary-Moderatecyan rounded-full py-3 px-9">Got it!</button>
+    <aside id="thank-you-modal" class="hidden flex items-center justify-center flex-col w-11/12 p-7 bg-white border border-Neutral-Darkgray rounded-lg absolute top-36 shadow-2xl md:w-[28rem] md:top-96 md:py-10">
+        <div class="flex items-center justify-center flex-col">
+            <img class="pb-4" src="images/icon-check.svg" alt="icon-check">
+            <h1 class="text-Neutral-Black text-2xl font-bold pb-4">Thanks for your support!</h1>
+        </div>
+        <div class="flex items-center justify-center flex-col">
+            <p class="text-Neutral-Darkgray text-base text-center font-normal pb-5">Your pledge brings us one step closer to sharing Mastercraft Bamboo Monitor Riser worldwide. You will get
+                an email once our campaign is completed.
+            </p>
+            <button id="clear-button" class="text-lg text-white font-normal hover:bg-Primary-Darkcyan bg-Primary-Moderatecyan rounded-full py-3 px-9">Got it!</button>
+        </div>
     </aside>
       <script src="app.js"></script>
 </body>
 </html>
+
+<!--<div id="thank-you-modal" class="hidden absolute top-36 grid place-items-center place-content-center shadow-2xl md:w-[28rem] md:top-96 md:py-10">-->
