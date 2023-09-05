@@ -17,36 +17,39 @@ document.addEventListener('DOMContentLoaded', function() {
   
   
   // Script for Tiny Modals
-  let selected1 = document.querySelector('#bg-button1');
-  let borderChange1 = document.querySelector('#selected-bg1');
-  let modalContainer1 = document.getElementById('modal-container1');
-  
-  selected1.addEventListener('click', function(){
-      borderChange1.style.borderColor = 'hsl(176, 50%, 47%)';
-      borderChange1.style.borderWidth = '2px'
-      modalContainer1.style.display = 'block';
-  });
+// Store references to the currently selected button and modal
+let currentSelectedButton = null;
+let currentModalContainer = null;
 
-  let selected2 = document.querySelector('#bg-button2');
-  let borderChange2 = document.querySelector('#selected-bg2');
-  let modalContainer2 = document.getElementById('modal-container2');
-  
-  selected2.addEventListener('click', function(){
-      borderChange2.style.borderColor = 'hsl(176, 50%, 47%)';
-      borderChange2.style.borderWidth = '2px'
-      modalContainer2.style.display = 'block';
-  });
+// Loop through buttons with IDs like bg-button1, bg-button2, bg-button3
+for (let i = 1; i <= 3; i++) {
+  let selectedButton = document.querySelector(`#bg-button${i}`);
+  let borderChange = document.querySelector(`#selected-bg${i}`);
+  let modalContainer = document.getElementById(`modal-container${i}`);
 
-  let selected3 = document.querySelector('#bg-button3');
-  let borderChange3 = document.querySelector('#selected-bg3');
-  let modalContainer3 = document.getElementById('modal-container3');
-  
-  selected3.addEventListener('click', function(){
-      borderChange3.style.borderColor = 'hsl(176, 50%, 47%)';
-      borderChange3.style.borderWidth = '2px'
-      modalContainer3.style.display = 'block';
-  });
+  selectedButton.addEventListener('click', function () {
+    // Close the previously opened modal (if any)
+    if (currentModalContainer) {
+      currentModalContainer.style.display = 'none';
+    }
 
+    // Reset the border styles for all buttons
+    for (let j = 1; j <= 3; j++) {
+      let resetBorderChange = document.querySelector(`#selected-bg${j}`);
+      resetBorderChange.style.borderColor = '';
+      resetBorderChange.style.borderWidth = '';
+    }
+
+    // Set the new current button and modal
+    currentSelectedButton = selectedButton;
+    currentModalContainer = modalContainer;
+
+    // Open the clicked modal and apply border styles
+    borderChange.style.borderColor = 'hsl(176, 50%, 47%)';
+    borderChange.style.borderWidth = '2px';
+    modalContainer.style.display = 'block';
+  });
+}
 
   //Script for Main modal
   let projectButton = document.querySelector('#project');
@@ -84,5 +87,62 @@ document.addEventListener('DOMContentLoaded', function() {
     bookmarkText.style.color = 'hsl(176, 72%, 28%)'
     bookmarkText.innerHTML = 'Bookmarked'
   })
+
+  //Script for Rewards Button
+
+
+// Function to scroll to a specific section in the modal
+function scrollToSection() {
+  // Specify the ID of the section you want to scroll to
+  var sectionIdToScrollTo = "targetSection";
+
+  // Get the target section element by its ID
+  var targetSection = document.getElementById('selected-bg2');
+
+  // Check if the target section exists before scrolling
+  if (targetSection) {
+    // Use scrollIntoView to smoothly scroll to the target section
+    targetSection.scrollIntoView({ behavior: "smooth" });
+  } else {
+    console.error("Target section not found!");
+  }
+}
+
+// Event listener for the button
+let rewardButton1 = document.querySelector('#reward-button1');
+
+rewardButton1.addEventListener('click', function(){
+  projectCard.style.display = 'flex';
+
+  // Call the scrollToSection function here to scroll to the specified section
+  scrollToSection();
+});
+
+function scrollToSection() {
+  // Specify the ID of the section you want to scroll to
+  var sectionIdToScrollTo = "targetSection";
+
+  // Get the target section element by its ID
+  var targetSection = document.getElementById('selected-bg2');
+
+  // Check if the target section exists before scrolling
+  if (targetSection) {
+    // Use scrollIntoView to smoothly scroll to the target section
+    targetSection.scrollIntoView({ behavior: "smooth" });
+  } else {
+    console.error("Target section not found!");
+  }
+}
+
+// Event listener for the button
+let rewardButton2 = document.querySelector('#reward-button2');
+
+rewardButton2.addEventListener('click', function(){
+  projectCard.style.display = 'flex';
+
+  // Call the scrollToSection function here to scroll to the specified section
+  scrollToSection();
+});
+
 
 });
