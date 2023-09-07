@@ -130,7 +130,7 @@
     </main>
 
 
-    <aside id="project-card" class="hidden flex items-center justify-center flex-col pt-10 pb-7 w-11/12 bg-white border border-Neutral-Darkgray rounded-lg absolute top-28 shadow-2xl md:w-[37rem]">
+    <aside id="project-card" class="custom-hidden flex items-center justify-center flex-col pt-10 pb-7 w-11/12 bg-white border border-Neutral-Darkgray rounded-lg absolute top-28 shadow-2xl md:w-[37rem]">
         <section class="px-5 pb-5">
             <div class="flex flex-row items-center justify-between gap-3 pb-4">
                 <h1 class="text-Neutral-Black text-2xl font-bold pb-4">Back this project</h1>
@@ -155,7 +155,7 @@
                     <p class="text-Neutral-Darkgray text-base text-left font-normal">Choose to support us without a reward if you simply believe in our project. As a backer, 
                         you will be signed up to receive product updates via email.
                     </p>
-                    <div id="modal-container1" class="hidden flex flex-col items-center w-full justify-center gap-3 border-t border-Neutral-Darkgray mt-5 pt-5 pb-3 md:flex-row">
+                    <div id="modal-container1" class="custom-hidden flex flex-col items-center w-full justify-center gap-3 border-t border-Neutral-Darkgray mt-5 pt-5 pb-3 md:flex-row md:justify-between">
                         <div>
                             <p class="text-base text-Neutral-Darkgray font-medium">Enter your pledge</p>
                         </div>
@@ -178,16 +178,16 @@
                         you'll be added to a special Backer member list.
                     </p>
                 </div>
-                <div class="pb-2">
-                    <p class="text-Neutral-Black text-2xl font-bold">101 <span class="text-Neutral-Darkgray text-base text-left font-normal">Left</span></p>
+                <div class="pb-2 md:relative md:-top-[8.6rem] md:left-[25rem]">
+                    <p class="text-Neutral-Black text-2xl font-bold md:text-xl">101 <span class="text-Neutral-Darkgray text-base text-left font-normal md:text-sm">Left</span></p>
                 </div>
-                <div id="modal-container2" class="hidden flex flex-col items-center w-full justify-center gap-3 border-t border-Neutral-Darkgray mt-5 pt-5 pb-3 md:gap-96">
+                <div id="modal-container2" class="custom-hidden flex flex-col items-center w-full justify-center gap-3 border-t border-Neutral-Darkgray mt-5 pt-5 pb-3 md:flex-row md:justify-between">
                     <div>
                         <p class="text-base text-Neutral-Darkgray font-medium">Enter your pledge</p>
                     </div>
-                    <div class="flex items-center flex-row gap-3">
-                        <input type="text" placeholder="$" class="text-lg text-black font-bold border border-Neutral-Darkgray rounded-full w-full py-3 px-7"></input>
-                        <button class="text-lg text-white font-normal bg-Primary-Moderatecyan rounded-full w-full py-3 px-9 hover:bg-Primary-Darkcyan">Continue</button>
+                    <div class="flex items-center flex-row gap-3 md:justify-between">
+                        <input type="text" placeholder="$" class="text-lg text-black font-bold border border-Neutral-Darkgray rounded-full w-full py-3 px-7 md:w-28"></input>
+                        <button id="complete-button2" type="button" class="text-lg text-white font-normal bg-Primary-Moderatecyan rounded-full w-full py-3 px-9 hover:bg-Primary-Darkcyan md:w-32 md:px-5">Continue</button>
                     </div>
                 </div>
             </div>
@@ -204,16 +204,16 @@
                         member list. Shipping is included.
                     </p>
                 </div>
-                <div class="pb-2">
-                    <p class="text-Neutral-Black text-2xl font-bold">64 <span class="text-Neutral-Darkgray text-base text-left font-normal">left</span></p>
+                <div class="pb-2 md:relative md:-top-[8.6rem] md:left-[26rem]">
+                    <p class="text-Neutral-Black text-2xl font-bold md:text-xl">64 <span class="text-Neutral-Darkgray text-base text-left font-normal md:text-sm">left</span></p>
                 </div>
-                <div id="modal-container3" class="hidden flex flex-col items-center w-full justify-center gap-3 border-t border-Neutral-Darkgray mt-5 pt-5 pb-3">
+                <div id="modal-container3" class="custom-hidden flex flex-col items-center w-full justify-center gap-3 border-t border-Neutral-Darkgray mt-5 pt-5 pb-3 md:flex-row md:justify-between">
                     <div>
                         <p class="text-base text-Neutral-Darkgray font-medium">Enter your pledge</p>
                     </div>
-                    <div class="flex items-center flex-row gap-3">
-                        <input type="text" placeholder="$" class="text-lg text-black font-bold border border-Neutral-Darkgray rounded-full w-full py-3 px-7"></input>
-                        <button class="text-lg text-white font-normal bg-Primary-Moderatecyan rounded-full w-full py-3 px-9 hover:bg-Primary-Darkcyan">Continue</button>
+                    <div class="flex items-center flex-row gap-3 md:justify-center">
+                        <input type="text" placeholder="$" class="text-lg text-black font-bold border border-Neutral-Darkgray rounded-full w-full py-3 px-7 md:w-28"></input>
+                        <button id="complete-button3" type="button" class="text-lg text-white font-normal bg-Primary-Moderatecyan rounded-full w-full py-3 px-9 hover:bg-Primary-Darkcyan md:w-32 md:px-5">Continue</button>
                     </div>
                 </div>
             </div>
@@ -231,13 +231,13 @@
                     </p>
                 </div>
                 <div class="pb-2">
-                    <p class="text-Neutral-Black text-2xl font-bold">0 <span class="text-Neutral-Darkgray text-base text-left font-normal">left</span></p>
+                    <p class="text-Neutral-Black text-2xl font-bold md:text-xl">0 <span class="text-Neutral-Darkgray text-base text-left font-normal md:text-sm">left</span></p>
                 </div>
             </div>
         </section>
     </aside>
 
-    <aside id="thank-you-modal" class="hidden flex items-center justify-center flex-col w-11/12 p-7 bg-white border border-Neutral-Darkgray rounded-lg absolute top-36 shadow-2xl md:w-[28rem] md:top-96 md:py-10">
+    <aside id="thank-you-modal" class="custom-hidden flex items-center justify-center flex-col w-11/12 p-7 bg-white border border-Neutral-Darkgray rounded-lg absolute top-36 shadow-2xl md:w-[28rem] md:top-96 md:py-10">
         <div class="flex items-center justify-center flex-col">
             <img class="pb-4" src="images/icon-check.svg" alt="icon-check">
             <h1 class="text-Neutral-Black text-2xl font-bold pb-4">Thanks for your support!</h1>
@@ -249,6 +249,11 @@
             <button id="clear-button" class="text-lg text-white font-normal hover:bg-Primary-Darkcyan bg-Primary-Moderatecyan rounded-full py-3 px-9">Got it!</button>
         </div>
     </aside>
+    <style>
+        .custom-hidden {
+            display: none;
+        }
+    </style>
       <script src="app.js"></script>
 </body>
 </html>
